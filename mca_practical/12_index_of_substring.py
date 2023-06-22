@@ -16,3 +16,4 @@
 # re.search()
 s1="banana"
 print (s1.find("an"))
+print(s1.rfind("an"))

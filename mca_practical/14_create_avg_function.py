@@ -33,8 +33,8 @@ def avgfun(*n):
 
 # Driver Code
 result1 = avgfun(1, 2, 3)
-result2 = avgfun(2, 6, 4, 8)
+result2 = avgfun(2, 6, 4, 8.5)
 
 # Printing average of the list
-print(round(result1, 2))
-print(round(result2, 2))
+print(round(result1,5))
+print(round(result2,5))
