@@ -1,25 +1,20 @@
-import  pymongo
-from pymongo import MongoClient
-
-# creation of MongoClient
-client=MongoClient()
+import pymongo
 
 # Connect with the portnumber and host
-client = MongoClient('mongodb://localhost:27017/')
+client = pymongo.MongoClient('mongodb://localhost:27017/')
 
 # Access database
-mydatabase = client["python"]
+db = client["demo_table"]
 
 # Access collection of the database
-mycollection=mydatabase["dbconnect"]
+mycol=db["demo"]
 
 # dictionary to be added in the database
-rec=[{
-    "_id":"2",
-    "name":"Gaurav",
-    "age":21
-
-}]
+mydict=[{"name":"vishal", "age":21},
+    {"name":"gaurav","rollNO":48}
+]
 
 # inserting the data in the database
-rec = mydatabase.dbconnect.insert(rec)
+x = mycol.dbconnect.insert_many(mydict)
+print(x)
+print("done")

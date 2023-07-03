@@ -1,8 +1,21 @@
+'''
+
+
+
+
+
+
+
+
+
+'''
+
+
 name ="Gaurav"
 for i in name:
     print(i)
     if(i=="u"):
-        print("hii", {name})
+        print("hii",name)
 
 # nested for loop:
 colors = ["Red","Pink","Blule","Yellow"]
